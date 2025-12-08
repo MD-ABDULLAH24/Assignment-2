@@ -1,6 +1,6 @@
 Vehicle Rental API – REST Backend A clean and structured REST API for a Vehicle Rental platform. Supports authentication, user management, vehicle management, and booking system.
 
-🔗 Live URL https://assignment2-sage-rho.vercel.app/
+🔗 Live URL https://assignment-blond-six.vercel.app/
 
 📦 Repository https://github.com/MD-ABDULLAH24/Assignment-2.git
 
