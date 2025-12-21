@@ -17,9 +17,9 @@ app.get("/", logger, (req: Request, res: Response) => {
 
 app.use("/api/v1/users", userRoute);
 
-app.use("/api/v1/vehicle", vehicleRoute)
+app.use("/api/v1/vehicles", vehicleRoute)
 
-app.use("/api/v1/booking", bookingRoute)
+app.use("/api/v1/bookings", bookingRoute)
 
 app.use("/api/v1/auth", userAuth)
 
