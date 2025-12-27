@@ -37,17 +37,17 @@ const getBooking = async (req: Request, res: Response) => {
 };
 
 // GET single booking
-const getSingleBooking = async (req: Request, res: Response) => {
-  const id = req.params.id;
-  if (!id) return res.status(400).json({ success: false, message: "Booking ID is required" });
+// const getSingleBooking = async (req: Request, res: Response) => {
+//   const id = req.params.id;
+//   if (!id) return res.status(400).json({ success: false, message: "Booking ID is required" });
 
-  try {
-    const result = await bookingServices.getSingleBooking(id);
-    return res.status(result.success ? 200 : 404).json(result);
-  } catch (error: any) {
-    return res.status(500).json({ success: false, message: error.message });
-  }
-};
+//   try {
+//     const result = await bookingServices.getSingleBooking(id);
+//     return res.status(result.success ? 200 : 404).json(result);
+//   } catch (error: any) {
+//     return res.status(500).json({ success: false, message: error.message });
+//   }
+// };
 
 // UPDATE booking
 const updateBooking = async (req: Request, res: Response) => {
@@ -88,7 +88,7 @@ const deleteBooking = async (req: Request, res: Response) => {
 export const bookingController = {
   bookingCreate,
   getBooking,
-  getSingleBooking,
+  // getSingleBooking,
   updateBooking,
   deleteBooking,
 };

@@ -42,17 +42,17 @@ const getBooking = async () => {
 };
 
 // GET single booking
-const getSingleBooking = async (id: string) => {
-  const result = await pool.query(
-    `SELECT b.*, v.vehicle_name, v.daily_rent_price 
-     FROM booking b 
-     JOIN vehicles v ON b.vehicle_id=v.id 
-     WHERE b.id=$1`,
-    [id]
-  );
-  if (result.rows.length === 0) return { success: false, message: "Booking not found", data: null };
-  return { success: true, message: "Booking retrieved successfully", data: result.rows[0] };
-};
+// const getSingleBooking = async (id: string) => {
+//   const result = await pool.query(
+//     `SELECT b.*, v.vehicle_name, v.daily_rent_price 
+//      FROM booking b 
+//      JOIN vehicles v ON b.vehicle_id=v.id 
+//      WHERE b.id=$1`,
+//     [id]
+//   );
+//   if (result.rows.length === 0) return { success: false, message: "Booking not found", data: null };
+//   return { success: true, message: "Booking retrieved successfully", data: result.rows[0] };
+// };
 
 // UPDATE booking
 const updateBooking = async (id: string, Payload: Record<string, any>) => {
@@ -96,7 +96,6 @@ const deleteBooking = async (id: string) => {
 export const bookingServices = {
   createBooking,
   getBooking,
-  getSingleBooking,
   updateBooking,
   deleteBooking,
 };

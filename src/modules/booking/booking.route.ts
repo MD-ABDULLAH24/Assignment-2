@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.post("/", loginAuth("admin", "customer"), bookingController.bookingCreate);
 
-router.get("/", bookingController.getBooking);
+router.get("/", loginAuth("admin"), bookingController.getBooking);
 
-router.get("/:id", bookingController.getSingleBooking);
+// router.get("/:id", bookingController.getSingleBooking);
 
 router.put("/:id", bookingController.updateBooking);
 

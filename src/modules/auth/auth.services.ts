@@ -49,7 +49,7 @@ const loginUser = async (email: string, password: string) => {
 
   const token = jwt.sign(
     { user: user.name, email: user.email, role: user.role },
-    config.secret as string,
+    config.secrete as string,
     {
       expiresIn: "7d",
     }

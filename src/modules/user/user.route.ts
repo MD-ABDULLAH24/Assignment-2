@@ -9,7 +9,7 @@ router.post("/", userControllers.userCreate);
 
 router.get("/", loginAuth("admin"), userControllers.getUser);
 
-router.get("/:id", loginAuth("admin"), userControllers.getSingleUser);
+// router.get("/:id", loginAuth("admin"), userControllers.getSingleUser);
 
 router.put("/:id", loginAuth("admin"), userControllers.updateUser);
 
