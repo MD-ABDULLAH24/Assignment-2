@@ -54,7 +54,7 @@ const loginAuth = (...roles: string[]) => {
       const token = authHeader.split(" ")[1];
       const decoded = jwt.verify(
         token as string,
-        config.secrete as string
+        config.secret as string
       ) as JwtPayload;
 
       const userResult = await pool.query(
